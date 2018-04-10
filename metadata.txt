@@ -1,0 +1,47 @@
+# This file contains metadata for your plugin. Since 
+# version 2.0 of QGIS this is the proper way to supply 
+# information about a plugin. The old method of 
+# embedding metadata in __init__.py will 
+# is no longer supported since version 2.0.
+
+# This file should be included when you package your plugin.# Mandatory items:
+
+[general]
+name=Adaplin Tool
+qgisMinimumVersion=2.0
+description=Faz a vetorização semiautomática de uma estrada com base em um raster.
+            Do the semiautomatic vectorization of a road based on a raster. 
+               
+version=0.1
+author=Marcel
+email=marcelsorri@gmail.com
+
+about=A ferramenta adiciona 2 pontos intermediários a cada segmento marcado pelo usuário, buscando a maximização das propriedades de uma estrada. 
+      A estrada deve ter níveis de cinza mais alto que o seu redor nas bandas de entrada, por isso se sugere o uso das bandas RGB.
+      Mais informações em: http://www.cartografia.org.br/cbc/2017/trabalhos/3/495.html
+      The tool adds 2 intermediate points to each segment marked by the user, seeking to maximize the properties of a road.
+      The road must have gray levels higher than its surroundings in the input bands, so the use of RGB bands is suggested.
+      More information in: http://www.cartografia.org.br/cbc/2017/trabalhos/3/495.html
+      
+
+tracker=github.com
+repository=github.com
+# End of mandatory metadata
+
+# Recommended items:
+
+# Uncomment the following line and add your changelog:
+# changelog=
+
+# Tags are comma separated with spaces allowed
+tags=
+
+homepage=
+category=Plugins
+icon=icon.png
+# experimental flag
+experimental=True
+
+# deprecated flag (applies to the whole plugin, not just a single version)
+deprecated=False
+
