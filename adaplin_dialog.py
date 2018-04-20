@@ -1,29 +1,9 @@
 # -*- coding: utf-8 -*-
-"""
-/***************************************************************************
- VetorizacaoDinamicaDialog
-                                 A QGIS plugin
- Vai vetorizar achando uma estrada, interpolando os pontos inicial e final
-                             -------------------
-        begin                : 2016-09-01
-        git sha              : $Format:%H$
-        copyright            : (C) 2016 by Marcel
-        email                : marcelsorri@gmail.com
- ***************************************************************************/
-
-/***************************************************************************
- *                                                                         *
- *   This program is free software; you can redistribute it and/or modify  *
- *   it under the terms of the GNU General Public License as published by  *
- *   the Free Software Foundation; either version 2 of the License, or     *
- *   (at your option) any later version.                                   *
- *                                                                         *
- ***************************************************************************/
-"""
 
 import os
 
 from PyQt4 import QtGui, uic
+from PyQt4.QtCore import *
 
 FORM_CLASS, _ = uic.loadUiType(os.path.join(
     os.path.dirname(__file__), 'adaplin_dialog_base.ui'))
@@ -39,3 +19,5 @@ class AdaplinDialog(QtGui.QDialog, FORM_CLASS):
         # http://qt-project.org/doc/qt-4.8/designer-using-a-ui-file.html
         # #widgets-and-dialogs-with-auto-connect
         self.setupUi(self)
+        
+        

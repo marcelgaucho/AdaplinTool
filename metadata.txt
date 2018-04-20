@@ -14,29 +14,32 @@ description=Faz a vetorização semiautomática de uma estrada com base em um ra
                
 version=0.1
 author=Marcel
-email=marcelsorri@gmail.com
+email=marcelgaucho@yahoo.com.br
 
 about=A ferramenta adiciona 2 pontos intermediários a cada segmento marcado pelo usuário, buscando a maximização das propriedades de uma estrada. 
-      A estrada deve ter níveis de cinza mais alto que o seu redor nas bandas de entrada, por isso se sugere o uso das bandas RGB.
-      Mais informações em: http://www.cartografia.org.br/cbc/2017/trabalhos/3/495.html
+      A estrada deve ter valores de pixel mais altos que o seu redor nas bandas de entrada, por isso se sugere o uso das bandas RGB.
+      Pressione Ctrl para ir para o modo manual, Backspace para voltar um passo na vetorização, Shift para centralizar a tela no último ponto marcado e Esc como opção para concluir a feição.
+      Mais informações em: https://github.com/marcelgaucho/AdaplinTool/documentacao
       The tool adds 2 intermediate points to each segment marked by the user, seeking to maximize the properties of a road.
-      The road must have gray levels higher than its surroundings in the input bands, so the use of RGB bands is suggested.
-      More information in: http://www.cartografia.org.br/cbc/2017/trabalhos/3/495.html
+      The road must have pixel values higher than its surroundings in the input bands, so the use of RGB bands is suggested.
+      Press Ctrl to go to manual mode, Backspace to go back one step in vectorization, Shift to center the screen at the last point marked and Esc as an option to finish the feature.
+      More information in: https://github.com/marcelgaucho/AdaplinTool/documentacao
       
 
-tracker=github.com
-repository=github.com
+tracker=https://github.com/marcelgaucho/AdaplinTool/issues
+repository=https://github.com/marcelgaucho/AdaplinTool
 # End of mandatory metadata
 
 # Recommended items:
 
 # Uncomment the following line and add your changelog:
-# changelog=
+# changelog=0.1 (20/04/2017)
+  - Começo do plugin
 
 # Tags are comma separated with spaces allowed
-tags=
+tags=UERJ-IBGE,extração de estradas,vetorização semiautomática,road extraction,semiautomatic vectorization 
 
-homepage=
+homepage=https://github.com/marcelgaucho/AdaplinTool
 category=Plugins
 icon=icon.png
 # experimental flag

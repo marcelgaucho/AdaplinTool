@@ -47,7 +47,8 @@ from adaplin_dialog import AdaplinDialog
 from adaplin_tool import Adaplin
 
 # Import code for settings
-from settingsdialog import SettingsDialog
+from settings_dialog import SettingsDialog
+from utils import *
 
 
 class AdaplinControl:
@@ -59,6 +60,9 @@ class AdaplinControl:
         
         # Create dialog form
         self.dlg = AdaplinDialog()
+        
+        # Create settings dialog
+        self.settingsDialog = SettingsDialog()
 
    
     def initGui(self):
@@ -73,9 +77,10 @@ class AdaplinControl:
         self.action.setCheckable(True) 
         self.action.setChecked(False) 
 
-        # Add Settings to the Vector Menu 
+        # Add Settings to the [Vector] Menu 
         self.settingsAction = QAction( "Settings", self.iface.mainWindow() )
-        self.iface.addPluginToVectorMenu("&Adaplin Settings", self.settingsAction)
+        #self.iface.addPluginToVectorMenu("&Adaplin Settings", self.settingsAction)
+        self.iface.addPluginToMenu("&Adaplin", self.settingsAction)
         self.settingsAction.triggered.connect(self.openSettings) 
 
         # Add the plugin to Plugin Menu and the Plugin Icon to the Toolbar
@@ -147,7 +152,7 @@ class AdaplinControl:
     def unload(self):
         # Removes item from Plugin Menu, Vector Menu and removes the toolbar icon
         self.iface.removePluginMenu("&Adaplin", self.action)
-        self.iface.removePluginVectorMenu("&Adaplin Settings", self.settingsAction)
+        self.iface.removePluginMenu("&Adaplin", self.settingsAction)
         self.iface.removeToolBarIcon(self.action)
 
     def trata_combo(self):
@@ -242,11 +247,26 @@ class AdaplinControl:
             self.action.setChecked(False)
      
     def openSettings(self):
-        # button signals in SettingsDialog were not working on Win7/64
-        # if SettingsDialog was created with iface.mainWindow() as parent
-        #self.settingsDialog = SettingsDialog(self.iface.mainWindow())
-        self.settingsDialog = SettingsDialog()
-        # self.settingsDialog.changed.connect( self.settingsChanged )
+        # Default settings to reload
+        def valoresPadrao():
+            self.settingsDialog.doubleSpinBox.setValue(DEFAULT_ESPACAMENTO)
+            self.settingsDialog.spinBox.setValue(DEFAULT_QPONTOS)
+            
+            
+        # Antigo teste
+        #self.settingsDialog = SettingsDialog()
+        #self.settingsDialog.show()
+        
+        # Connect button to function that reload default values
+        self.settingsDialog.pushButton.clicked.connect(valoresPadrao)
         self.settingsDialog.show()
+        result = self.settingsDialog.exec_()
+        
+        # If OK is pressed we update the settings
+        if result:
+            QSettings().setValue(SETTINGS_NAME + "/qpontos", self.settingsDialog.spinBox.value())
+            QSettings().setValue(SETTINGS_NAME + "/espacamento", self.settingsDialog.doubleSpinBox.value())
 
+        # Disconnect signal connected previously 
+        self.settingsDialog.pushButton.clicked.disconnect(valoresPadrao)
             
