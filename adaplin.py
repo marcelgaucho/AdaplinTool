@@ -252,10 +252,6 @@ class AdaplinControl:
             self.settingsDialog.doubleSpinBox.setValue(DEFAULT_ESPACAMENTO)
             self.settingsDialog.spinBox.setValue(DEFAULT_QPONTOS)
             
-            
-        # Antigo teste
-        #self.settingsDialog = SettingsDialog()
-        #self.settingsDialog.show()
         
         # Connect button to function that reload default values
         self.settingsDialog.pushButton.clicked.connect(valoresPadrao)

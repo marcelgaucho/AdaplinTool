@@ -33,9 +33,9 @@
    <property name="geometry">
     <rect>
      <x>30</x>
-     <y>80</y>
-     <width>301</width>
-     <height>41</height>
+     <y>50</y>
+     <width>331</width>
+     <height>91</height>
     </rect>
    </property>
    <property name="font">
@@ -44,7 +44,7 @@
     </font>
    </property>
    <property name="text">
-    <string>Espaçamento entre os vértices na perpendicular ao segmento (em m)</string>
+    <string>Spacing between the vertices in the perpendicular to the segment (in m) </string>
    </property>
    <property name="wordWrap">
     <bool>true</bool>
@@ -54,8 +54,8 @@
    <property name="geometry">
     <rect>
      <x>30</x>
-     <y>190</y>
-     <width>341</width>
+     <y>200</y>
+     <width>391</width>
      <height>71</height>
     </rect>
    </property>
@@ -65,7 +65,7 @@
     </font>
    </property>
    <property name="text">
-    <string>Quantidade de pontos acima e abaixo do segmento na perpendicular ao segmento</string>
+    <string>Number of points above and below the segment in the perpendicular to the segment</string>
    </property>
    <property name="wordWrap">
     <bool>true</bool>
@@ -87,8 +87,8 @@
   <widget class="QSpinBox" name="spinBox">
    <property name="geometry">
     <rect>
-     <x>470</x>
-     <y>200</y>
+     <x>480</x>
+     <y>220</y>
      <width>42</width>
      <height>22</height>
     </rect>
@@ -107,7 +107,7 @@
     </rect>
    </property>
    <property name="text">
-    <string>Restaurar valores padrão</string>
+    <string>Restore default values</string>
    </property>
   </widget>
  </widget>

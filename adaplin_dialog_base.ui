@@ -72,7 +72,7 @@
     </font>
    </property>
    <property name="text">
-    <string>Banda vermelha</string>
+    <string>Red channel</string>
    </property>
   </widget>
   <widget class="QComboBox" name="comboBox_2">
@@ -100,7 +100,7 @@
     </font>
    </property>
    <property name="text">
-    <string>Banda verde</string>
+    <string>Green channel</string>
    </property>
   </widget>
   <widget class="QComboBox" name="comboBox_3">
@@ -128,7 +128,7 @@
     </font>
    </property>
    <property name="text">
-    <string>Banda azul</string>
+    <string>Blue channel</string>
    </property>
   </widget>
   <widget class="QComboBox" name="comboBox_4">
