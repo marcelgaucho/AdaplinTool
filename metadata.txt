@@ -13,7 +13,7 @@ description=Do the semiautomatic vectorization of a road based on a raster. Faz 
             
                
 version=0.1
-author=Marcel
+author=Marcel Rotunno
 email=marcelgaucho@yahoo.com.br
 
 about=This plugin was developed for the master's thesis of Marcel Emanuelli Rotunno at the University of the State of Rio de Janeiro (UERJ),
